@@ -1,0 +1,13 @@
+::Create new topic called 'tutorialspedia'
+
+kafka-topics.bat --create --topic tutorialspedia --bootstrap-server localhost:9092
+
+::Get list of topics
+
+kafka-topics.bat --list --bootstrap-server localhost:9092
+
+::Publish messages to this topic
+bin\windows\kafka-console-producer.bat --topic tutorialspedia --bootstrap-server localhost:9092
+
+::Consume messages from this topic
+bin\windows\kafka-console-consumer.bat --topic tutorialspedia --bootstrap-server localhost:9092
